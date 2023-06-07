@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 html {
   height: 100%;
   width: 100%;
@@ -16,10 +19,22 @@ h3 {
   font-style: italic;
   font-size: 1rem;
   padding-left: 1rem;
+  margin-left: 3rem;
 }
 p {
   font-size: 1.5rem;
   padding: 1rem;
+}
+ol,ul {
+  font-size: 1.4rem;
+  padding: 1rem;
+  margin-left: 3rem;
+}
+ul {
+  list-style-type: disc;
+}
+ol {
+  list-style-type: decimal;
 }
 footer {
   text-align: right;
