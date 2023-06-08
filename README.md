@@ -4,7 +4,8 @@
 
 I've built an app that will quiz visitors on their knowledge of me.
 
-### Author: Student/Group Name
+### Author: Geoff Lloyd
+Lab 04 - Driver: Luke Rogers, Navigator: Geoff Lloyd.
 
 ### Links and Resources
 
