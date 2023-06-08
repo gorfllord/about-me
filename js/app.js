@@ -21,17 +21,18 @@ function checkAnswer(answer, rightAnswer, wrongAnswer) {
 }
 checkAnswer(answer1, yesAnswer, noAnswer);
 let answer2 = prompt('Do I mix local concerts as a hobby?').toLowerCase();
-if (answer2 === 'yes' || answer2 === 'y') {
-  //console.log('Correct!');
-  alert('Correct!');
-  rightAnswer++;
-} else if (answer2 === 'no' || answer2 === 'n') {
-  //console.log('Incorrect!');
-  alert('Incorrect!');
-} else {
-  //console.log(tryAgain);
-  alert(tryAgain);
-}
+checkAnswer(answer2, yesAnswer, noAnswer);
+// if (answer2 === 'yes' || answer2 === 'y') {
+//   //console.log('Correct!');
+//   alert('Correct!');
+//   rightAnswer++;
+// } else if (answer2 === 'no' || answer2 === 'n') {
+//   //console.log('Incorrect!');
+//   alert('Incorrect!');
+// } else {
+//   //console.log(tryAgain);
+//   alert(tryAgain);
+// }
 let answer3 = prompt('Do I have a cat?').toLowerCase();
 if (answer3 === 'yes' || answer3 === 'y') {
   console.log('Correct!');
