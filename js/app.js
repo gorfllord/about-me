@@ -64,23 +64,23 @@ if (answer5 === 'yes' || answer5 === 'y') {
   alert(tryAgain);
 }
 let attempts = 4;
-let answer6 = prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`);
+let answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`));
 for (let i = 0; i < attempts;) {
-  if (answer6 === '7') {
+  if (answer6 === 7) {
     i = attempts;
     rightAnswer++;
   } else if (answer6 < 7) {
     alert('Too low!');
     i++;
-    answer6 = prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`);
+    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
   } else if (answer6 > 7) {
     alert('Too high!');
     i++;
-    answer6 = prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`);
+    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
   } else {
     alert('Sorry, that\'s not a number!');
     i++;
-    answer6 = prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`);
+    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
   }
 }
 alert('The answer was 7!');
