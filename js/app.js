@@ -97,23 +97,35 @@ function numberQuestion() {
 }
 numberQuestion();
 
-attempts = 6;
-let question7Choices = ['Chrono Trigger', 'Chrono Cross', 'Xenoblade Chronicles', 'The Legend of Zelda: Majora\'s Mask', 'Final Fantasy VI', 'Super Metroid', 'Earthbound', 'Horizon Zero Dawn', 'Donkey Kong Country 2', 'Tales of Phantasia'];
-let answer7 = prompt(`What's one of my top 10 video games? I'll give you ${attempts} guesses.`);
-while (attempts > 0) {
-  for (let i = 0; i < 10; i++) {
-    if (answer7.toLowerCase() === question7Choices[i].toLowerCase()) {
-      i = 10;
-      attempts = 0;
-      rightAnswer++;
-      alert('Correct!');
+function topTenQuestion() {
+  let attempts = 6;
+  let question7Choices = ['Chrono Trigger', 'Chrono Cross', 'Xenoblade Chronicles', 'The Legend of Zelda: Majora\'s Mask', 'Final Fantasy VI', 'Super Metroid', 'Earthbound', 'Horizon Zero Dawn', 'Donkey Kong Country 2', 'Tales of Phantasia'];
+  let answer7 = prompt(`What's one of my top 10 video games? I'll give you ${attempts} guesses.`);
+  while (attempts > 0) {
+    for (let i = 0; i < 10; i++) {
+      if (answer7.toLowerCase() === question7Choices[i].toLowerCase()) {
+        i = 10;
+        attempts = 0;
+        score++;
+        alert('Correct!');
+      }
+    }
+    if (attempts > 0) {
+      alert('Sorry, try again!');
+      attempts--;
+      answer7 = prompt(`What's one of my top 10 favorite video games? You have ${attempts} guesses remaining.`);
     }
   }
-  if (attempts > 0) {
-    alert('Sorry, try again!');
-    attempts--;
-    answer7 = prompt(`What's one of my top 10 favorite video games? You have ${attempts} guesses remaining.`);
+  let topTenMessage = 'My top 10 favorite video games are ';
+  for (let i = 0; i < question7Choices.length; i++) {
+    if (i < question7Choices.length - 1) {
+      topTenMessage += `${question7Choices[i]}, `;
+    } else if (i === question7Choices.length - 1) {
+      topTenMessage += `and ${question7Choices[i]}.`;
+    }
   }
+  alert(topTenMessage);
 }
-alert(`My top 10 favorite video games are ${question7Choices[0]}, ${question7Choices[1]}, ${question7Choices[2]}, ${question7Choices[3]}, ${question7Choices[4]}, ${question7Choices[5]}, ${question7Choices[6]}, ${question7Choices[7]}, ${question7Choices[8]}, and ${question7Choices[9]}.`);
-alert('Well, ' + userName + ', you got ' + rightAnswer + ' right.');
+topTenQuestion();
+
+alert('Well, ' + userName + ', you got ' + score + ' right.');
