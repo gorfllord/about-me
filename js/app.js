@@ -2,19 +2,24 @@
 let userName = prompt('What\'s your name?');
 alert('Welcome, ' + userName + '! Answer the following questions with either Yes/No or Y/N');
 let tryAgain = 'Sorry, I need a Yes/No or Y/N answer.';
-let rightAnswer = 0;
+let score = 0;
+let yesAnswer = ['yes', 'y'];
+let noAnswer = ['no', 'n'];
 let answer1 = prompt('Is my favorite color purple?').toLowerCase();
-if (answer1 === 'yes' || answer1 === 'y') {
-  //console.log('Correct!');
-  alert('Correct!');
-  rightAnswer++;
-} else if (answer1 === 'no' || answer1 === 'n') {
-  //console.log('Incorrect!');
-  alert('Incorrect!');
-} else {
-  //console.log(tryAgain);
-  alert(tryAgain);
+function checkAnswer(answer, rightAnswer, wrongAnswer) {
+  if (answer === rightAnswer[0] || answer === rightAnswer[1]) {
+    //console.log('Correct!');
+    alert('Correct!');
+    score++;
+  } else if (answer === wrongAnswer[0] || answer === wrongAnswer[1]) {
+    //console.log('Incorrect!');
+    alert('Incorrect!');
+  } else {
+    //console.log(tryAgain);
+    alert(tryAgain);
+  }
 }
+checkAnswer(answer1, yesAnswer, noAnswer);
 let answer2 = prompt('Do I mix local concerts as a hobby?').toLowerCase();
 if (answer2 === 'yes' || answer2 === 'y') {
   //console.log('Correct!');
