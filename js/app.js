@@ -72,27 +72,31 @@ checkAnswer(answer5, yesAnswer, noAnswer);
 //   //console.log(tryAgain);
 //   alert(tryAgain);
 // }
-let attempts = 4;
-let answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`));
-for (let i = 0; i < attempts;) {
-  if (answer6 === 7) {
-    i = attempts;
-    rightAnswer++;
-  } else if (answer6 < 7) {
-    alert('Too low!');
-    i++;
-    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
-  } else if (answer6 > 7) {
-    alert('Too high!');
-    i++;
-    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
-  } else {
-    alert('Sorry, that\'s not a number!');
-    i++;
-    answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
+function numberQuestion() {
+  let attempts = 4;
+  let answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`));
+  for (let i = 0; i < attempts;) {
+    if (answer6 === 7) {
+      i = attempts;
+      score++;
+    } else if (answer6 < 7) {
+      alert('Too low!');
+      i++;
+      answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
+    } else if (answer6 > 7) {
+      alert('Too high!');
+      i++;
+      answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
+    } else {
+      alert('Sorry, that\'s not a number!');
+      i++;
+      answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? You have ${attempts - i} chances left!`));
+    }
   }
+  alert('The answer was 7!');
 }
-alert('The answer was 7!');
+numberQuestion();
+
 attempts = 6;
 let question7Choices = ['Chrono Trigger', 'Chrono Cross', 'Xenoblade Chronicles', 'The Legend of Zelda: Majora\'s Mask', 'Final Fantasy VI', 'Super Metroid', 'Earthbound', 'Horizon Zero Dawn', 'Donkey Kong Country 2', 'Tales of Phantasia'];
 let answer7 = prompt(`What's one of my top 10 video games? I'll give you ${attempts} guesses.`);
