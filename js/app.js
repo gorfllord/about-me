@@ -34,17 +34,18 @@ checkAnswer(answer2, yesAnswer, noAnswer);
 //   alert(tryAgain);
 // }
 let answer3 = prompt('Do I have a cat?').toLowerCase();
-if (answer3 === 'yes' || answer3 === 'y') {
-  console.log('Correct!');
-  alert('Correct!');
-  rightAnswer++;
-} else if (answer3 === 'no' || answer3 === 'n') {
-  console.log('Incorrect!');
-  alert('Incorrect!');
-} else {
-  //console.log(tryAgain);
-  alert(tryAgain);
-}
+checkAnswer(answer3, yesAnswer, noAnswer);
+// if (answer3 === 'yes' || answer3 === 'y') {
+//   console.log('Correct!');
+//   alert('Correct!');
+//   rightAnswer++;
+// } else if (answer3 === 'no' || answer3 === 'n') {
+//   console.log('Incorrect!');
+//   alert('Incorrect!');
+// } else {
+//   //console.log(tryAgain);
+//   alert(tryAgain);
+// }
 let answer4 = prompt('Have I lived outside of Washington?').toLowerCase();
 if (answer4 === 'no' || answer4 === 'n') {
   console.log('Correct!');
