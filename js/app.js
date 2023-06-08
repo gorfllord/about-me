@@ -60,17 +60,18 @@ checkAnswer(answer4, noAnswer, yesAnswer);
 //   alert(tryAgain);
 // }
 let answer5 = prompt('Do I play D&D?').toLowerCase();
-if (answer5 === 'yes' || answer5 === 'y') {
-  console.log('Correct!');
-  alert('Correct!');
-  rightAnswer++;
-} else if (answer5 === 'no' || answer5 === 'n') {
-  console.log('Incorrect!');
-  alert('Incorrect!');
-} else {
-  //console.log(tryAgain);
-  alert(tryAgain);
-}
+checkAnswer(answer5, yesAnswer, noAnswer);
+// if (answer5 === 'yes' || answer5 === 'y') {
+//   console.log('Correct!');
+//   alert('Correct!');
+//   rightAnswer++;
+// } else if (answer5 === 'no' || answer5 === 'n') {
+//   console.log('Incorrect!');
+//   alert('Incorrect!');
+// } else {
+//   //console.log(tryAgain);
+//   alert(tryAgain);
+// }
 let attempts = 4;
 let answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`));
 for (let i = 0; i < attempts;) {
