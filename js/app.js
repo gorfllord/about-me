@@ -47,17 +47,18 @@ checkAnswer(answer3, yesAnswer, noAnswer);
 //   alert(tryAgain);
 // }
 let answer4 = prompt('Have I lived outside of Washington?').toLowerCase();
-if (answer4 === 'no' || answer4 === 'n') {
-  console.log('Correct!');
-  alert('Correct!');
-  rightAnswer++;
-} else if (answer4 === 'yes' || answer4 === 'y') {
-  console.log('Incorrect!');
-  alert('Incorrect!');
-} else {
-  //console.log(tryAgain);
-  alert(tryAgain);
-}
+checkAnswer(answer4, noAnswer, yesAnswer);
+// if (answer4 === 'no' || answer4 === 'n') {
+//   console.log('Correct!');
+//   alert('Correct!');
+//   rightAnswer++;
+// } else if (answer4 === 'yes' || answer4 === 'y') {
+//   console.log('Incorrect!');
+//   alert('Incorrect!');
+// } else {
+//   //console.log(tryAgain);
+//   alert(tryAgain);
+// }
 let answer5 = prompt('Do I play D&D?').toLowerCase();
 if (answer5 === 'yes' || answer5 === 'y') {
   console.log('Correct!');
