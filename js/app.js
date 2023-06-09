@@ -6,14 +6,11 @@ let yesAnswer = ['yes', 'y'];
 let noAnswer = ['no', 'n'];
 function checkAnswer(answer, rightAnswer, wrongAnswer) {
   if (answer === rightAnswer[0] || answer === rightAnswer[1]) {
-    //console.log('Correct!');
     alert('Correct!');
     score++;
   } else if (answer === wrongAnswer[0] || answer === wrongAnswer[1]) {
-    //console.log('Incorrect!');
     alert('Incorrect!');
   } else {
-    //console.log(tryAgain);
     alert(tryAgain);
   }
 }
