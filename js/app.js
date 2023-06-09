@@ -1,11 +1,9 @@
 'use strict';
 let userName = prompt('What\'s your name?');
-alert('Welcome, ' + userName + '! Answer the following questions with either Yes/No or Y/N');
 let tryAgain = 'Sorry, I need a Yes/No or Y/N answer.';
 let score = 0;
 let yesAnswer = ['yes', 'y'];
 let noAnswer = ['no', 'n'];
-let answer1 = prompt('Is my favorite color purple?').toLowerCase();
 function checkAnswer(answer, rightAnswer, wrongAnswer) {
   if (answer === rightAnswer[0] || answer === rightAnswer[1]) {
     //console.log('Correct!');
@@ -19,59 +17,6 @@ function checkAnswer(answer, rightAnswer, wrongAnswer) {
     alert(tryAgain);
   }
 }
-checkAnswer(answer1, yesAnswer, noAnswer);
-let answer2 = prompt('Do I mix local concerts as a hobby?').toLowerCase();
-checkAnswer(answer2, yesAnswer, noAnswer);
-// if (answer2 === 'yes' || answer2 === 'y') {
-//   //console.log('Correct!');
-//   alert('Correct!');
-//   rightAnswer++;
-// } else if (answer2 === 'no' || answer2 === 'n') {
-//   //console.log('Incorrect!');
-//   alert('Incorrect!');
-// } else {
-//   //console.log(tryAgain);
-//   alert(tryAgain);
-// }
-let answer3 = prompt('Do I have a cat?').toLowerCase();
-checkAnswer(answer3, yesAnswer, noAnswer);
-// if (answer3 === 'yes' || answer3 === 'y') {
-//   console.log('Correct!');
-//   alert('Correct!');
-//   rightAnswer++;
-// } else if (answer3 === 'no' || answer3 === 'n') {
-//   console.log('Incorrect!');
-//   alert('Incorrect!');
-// } else {
-//   //console.log(tryAgain);
-//   alert(tryAgain);
-// }
-let answer4 = prompt('Have I lived outside of Washington?').toLowerCase();
-checkAnswer(answer4, noAnswer, yesAnswer);
-// if (answer4 === 'no' || answer4 === 'n') {
-//   console.log('Correct!');
-//   alert('Correct!');
-//   rightAnswer++;
-// } else if (answer4 === 'yes' || answer4 === 'y') {
-//   console.log('Incorrect!');
-//   alert('Incorrect!');
-// } else {
-//   //console.log(tryAgain);
-//   alert(tryAgain);
-// }
-let answer5 = prompt('Do I play D&D?').toLowerCase();
-checkAnswer(answer5, yesAnswer, noAnswer);
-// if (answer5 === 'yes' || answer5 === 'y') {
-//   console.log('Correct!');
-//   alert('Correct!');
-//   rightAnswer++;
-// } else if (answer5 === 'no' || answer5 === 'n') {
-//   console.log('Incorrect!');
-//   alert('Incorrect!');
-// } else {
-//   //console.log(tryAgain);
-//   alert(tryAgain);
-// }
 function numberQuestion() {
   let attempts = 4;
   let answer6 = parseInt(prompt(`I'm thinking of a number between 1 and 10. What is it? I'll give you ${attempts} chances.`));
@@ -95,8 +40,6 @@ function numberQuestion() {
   }
   alert('The answer was 7!');
 }
-numberQuestion();
-
 function topTenQuestion() {
   let attempts = 6;
   let question7Choices = ['Chrono Trigger', 'Chrono Cross', 'Xenoblade Chronicles', 'The Legend of Zelda: Majora\'s Mask', 'Final Fantasy VI', 'Super Metroid', 'Earthbound', 'Horizon Zero Dawn', 'Donkey Kong Country 2', 'Tales of Phantasia'];
@@ -126,6 +69,17 @@ function topTenQuestion() {
   }
   alert(topTenMessage);
 }
+alert('Welcome, ' + userName + '! Answer the following questions with either Yes/No or Y/N');
+let answer1 = prompt('Is my favorite color purple?').toLowerCase();
+checkAnswer(answer1, yesAnswer, noAnswer);
+let answer2 = prompt('Do I mix local concerts as a hobby?').toLowerCase();
+checkAnswer(answer2, yesAnswer, noAnswer);
+let answer3 = prompt('Do I have a cat?').toLowerCase();
+checkAnswer(answer3, yesAnswer, noAnswer);
+let answer4 = prompt('Have I lived outside of Washington?').toLowerCase();
+checkAnswer(answer4, noAnswer, yesAnswer);
+let answer5 = prompt('Do I play D&D?').toLowerCase();
+checkAnswer(answer5, yesAnswer, noAnswer);
+numberQuestion();
 topTenQuestion();
-
 alert('Well, ' + userName + ', you got ' + score + ' right.');
